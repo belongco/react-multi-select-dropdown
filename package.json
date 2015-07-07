@@ -1,6 +1,6 @@
 {
   "name": "react-multi-select-dropdown",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A React Dropdown which shows a list of items which can be multi selcted.",
   "main": "dist/react-multi-select-dropdown.js",
   "repository": {
