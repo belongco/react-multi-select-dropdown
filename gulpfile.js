@@ -1,12 +1,10 @@
 //browserify to concatenate js, watchify to watch browserify
 
 var gulp = require('gulp');
-var uglify = require('gulp-uglify');
 var source = require('vinyl-source-stream');
 var browserify = require('browserify');
 var watchify = require('watchify');
 var reactify = require('reactify');
-var streamify = require('gulp-streamify');
 var eslint = require('gulp-eslint');
 var debug= require('gulp-debug');
 
@@ -20,7 +18,7 @@ function swallowError (error) {
 var path = {
   MINIFIED_OUT: 'react-multi-select-dropdown.min.js',
   OUT: 'react-multi-select-dropdown.js',
-  DEST: '/dist/',
+  DEST: './dist/',
   ENTRY_POINT: './src/index.js'
 };
 
@@ -28,7 +26,7 @@ var path = {
 
 gulp.task('watch',  function() {
 
-       // gulp.watch(path.DEST+"js/**/*.js", ['lint']);
+  gulp.watch(path.DEST+"js/**/*.js", ['lint']);
 
   var watcher  = watchify(browserify({
     entries: [path.ENTRY_POINT],
@@ -42,7 +40,7 @@ gulp.task('watch',  function() {
     .on('error', swallowError)
       .pipe(source(path.OUT))
       .pipe(debug({title: 'building:'}))
-      .pipe(gulp.dest(path.DEST+"/js"))
+      .pipe(gulp.dest(path.DEST))
       console.log('Updated');
   }).bundle();
 });
@@ -69,8 +67,7 @@ gulp.task('build', function(){
     transform: [reactify]
   })
     .bundle()
-    .pipe(source(path.MINIFIED_OUT))
-//.pipe(streamify(uglify(path.MINIFIED_OUT)))
+    .pipe(source(path.OUT))
     .pipe(gulp.dest(path.DEST));
 });
 

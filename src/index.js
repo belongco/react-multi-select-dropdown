@@ -1,13 +1,5 @@
- 
-var $ = require("jquery");
-var React = require("react");
-
-
-
 var DropdownItem = React.createClass({
-
 	render : function(){
-
 		if(this.props.selected){
 			return <li className="multiselect-item active" onClick={this.props.onSelected}>
 						{this.props.item[this.props.display_field]}
@@ -17,7 +9,6 @@ var DropdownItem = React.createClass({
 						{this.props.item[this.props.display_field]}
 					</li>;
 		}
-
 	}
 });
 
@@ -39,8 +30,6 @@ var MultiSelect = React.createClass({
 			this.setState({selected :arr });
 
 		};
-
-
 	},
 	getInitialState:function(){
 		return {open:false,

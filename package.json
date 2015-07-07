@@ -5,7 +5,10 @@
   "main": "dist/react-multi-select-dropdown.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/moroshko/react-autosuggest.git"
+    "url": "git+https://github.com/bhargav175/react-multi-select-dropdown.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": {
     "name": "bhargavponnapalli",
@@ -18,10 +21,10 @@
     "browserify": "^10.2.4",
     "debug": "^2.2.0",
     "gulp": "^3.9.0",
+    "gulp-debug": "^2.0.1",
     "jquery": "^2.1.4",
     "react": "^0.13.3",
     "reactify": "^1.1.1",
-    "streamify": "^0.2.4",
     "uglify": "^0.1.5",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.2.3"
