@@ -20,6 +20,8 @@
   "devDependencies": {
     "browserify": "^10.2.4",
     "debug": "^2.2.0",
+    "eslint": "^0.24.0",
+    "eslint-plugin-react": "^2.6.4",
     "gulp": "^3.9.0",
     "gulp-debug": "^2.0.1",
     "jquery": "^2.1.4",
@@ -32,6 +34,8 @@
   "keywords": [
     "react-multi-select-dropdown",
     "multiselect",
+    "react multi-select",
+    "react-multi-select",
     "react-select-multi",
     "react-multi-options",
     "react-select",

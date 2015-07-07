@@ -19,6 +19,7 @@ var path = {
   MINIFIED_OUT: 'react-multi-select-dropdown.min.js',
   OUT: 'react-multi-select-dropdown.js',
   DEST: './dist/',
+  SRC : './src',
   ENTRY_POINT: './src/index.js'
 };
 
@@ -46,7 +47,7 @@ gulp.task('watch',  function() {
 });
 
 gulp.task('lint', function () {
-    return gulp.src([path.DEST+"/**/*.js", '!'+path.DEST+'**/*.min.js'])
+    return gulp.src([path.SRC+"/**/*.js", '!'+path.SRC+'**/*.min.js'])
         // eslint() attaches the lint output to the eslint property
         // of the file object so it can be used by other modules.
          .pipe(debug({title:'lint'}))
