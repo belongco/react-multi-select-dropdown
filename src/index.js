@@ -1,3 +1,5 @@
+var React = require("react");
+var $ = require("jquery");
 var DropdownItem = React.createClass({
 	render: function(){
 		if (this.props.selected){
@@ -17,7 +19,7 @@ var MultiSelect = React.createClass({
 		(selectedItemsIndex > -1) ? this.state.selected.splice(selectedItemsIndex,1) : this.state.selected.push(index) ;
 		this.setState({open:false});
 		this.forceUpdate();
-		this.props.onUpdate ? this.props.onUpdate(this.state.selected) :'';
+		this.props.onItemSelected ? this.props.onItemSelected(this.state.selected) :'';
 	},
 	_selectAll : function(){
 		if (this.state.selected.length == this.props.items.length){
@@ -44,7 +46,6 @@ var MultiSelect = React.createClass({
 			}
 		}
 		$(document).unbind('click.'+self.props.name,documentClickHandler).bind('click.'+self.props.name,documentClickHandler);
-
 	},
 	componentDidReceiveProps : function(){
 		this.forceUpdate();

@@ -35,6 +35,7 @@
     "react-multi-select-dropdown",
     "multiselect",
     "react multi-select",
+    "react multiselect",
     "react-multi-select",
     "react-select-multi",
     "react-multi-options",
@@ -54,6 +55,8 @@
   ],
   "directories": {},
   "dependencies": {
-    "gulp-eslint": "^0.15.0"
+    "jquery": "^2.1.4",
+    "react": "^0.13.3"
+    
   }
 }
